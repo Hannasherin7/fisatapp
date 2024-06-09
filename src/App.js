@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { AddStudent } from './components/Addstudent';
+import { SearchStudent } from './components/Searchstudent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ViewStudent } from './components/ViewStudent';
+import { Fisat } from './components/Fisat';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/'element={(<Fisat/>)}/>
+      <Route path='/add'element={(<AddStudent/>)}/>
+      <Route path='search'element={(<SearchStudent/>)}/>
+      <Route path='Viewall'element={(<ViewStudent/>)}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
