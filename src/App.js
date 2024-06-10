@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import { AddStudent } from './components/Addstudent';
-import { SearchStudent } from './components/Searchstudent';
+import { AddStudent } from './components/AddStudent';
+import { SearchStudent } from './components/SearchStudent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ViewStudent } from './components/ViewStudent';
 import { Fisat } from './components/Fisat';

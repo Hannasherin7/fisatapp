@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavBar } from './NavBar'
+import axios from 'axios'
 
 export const AddStudent = () => {
   const [data,setData]=useState(
@@ -7,10 +8,10 @@ export const AddStudent = () => {
       "firstname":"",
       "lastname":"",
       "college":"",
-      "course":"",
       "dob":"",
+      "course":"",
+      "mobile":"",
       "email":"",
-      "mobno":"",
       "address":""
     }
   )
@@ -19,6 +20,23 @@ export const AddStudent = () => {
   }
   const readVlue=()=>{
     console.log(data)
+    axios.post("https://courseapplogix.onrender.com/addstudents",data).then(
+      (response)=>{
+        console.log(response.data)
+        if (response.data.status=="success") {
+          alert("successfully added")
+          
+        } else {
+          alert("error")
+          
+        }
+      }
+    ).catch(
+      (error)=>{
+        console.log(error.message)
+        alert(error.map)
+      }
+    ).finally()
   }
   return (
     <div>
@@ -55,7 +73,7 @@ export const AddStudent = () => {
             </div>
             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <label htmlFor="" className="form-label">mobile no</label>
-              <input type="text" className="form-control" name='mobno'value={data.mobno}onChange={inputHandler}/>
+              <input type="text" className="form-control" name='mobile'value={data.mobile}onChange={inputHandler}/>
             </div>
             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <label htmlFor="" className="form-label">Address</label>

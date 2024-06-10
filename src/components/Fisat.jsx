@@ -11,7 +11,7 @@ export const Fisat = () => {
                
         <h1><center>FEDERAL INSTITUTE OF SCIENCE AND TECHNOLOGY</center></h1>
        <center><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/FISAT_LOGO.png"height="150px"width="150px" alt="" /></center> 
-      
+      <marquee><b>FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT.FISAT</b></marquee>
        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
